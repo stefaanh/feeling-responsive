@@ -45,7 +45,10 @@ urlimg: 'https://phlow.github.io/feeling-responsive/images/'
 logo: "logo.png"
 
 # Gems
-gems:
+# Renamed
+# jekyll serve did report a deprecation
+#   The 'gems' configuration option has been renamed to 'plugins'. Please update your config file accordingly.
+plugins:
     - jekyll-asciidoc
     - jekyll-gist
     - jekyll-paginate
