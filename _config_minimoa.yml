@@ -1,0 +1,58 @@
+#
+# This config-file is overriding the original settings. Instead of changing the original
+# configuration for the project, you start both config-files, overwriting
+# the first one with the site variables needed.
+#
+# Start development with › $ jekyll serve --config _config.yml,_config_hbg.yml
+
+# Main author of the website
+# See > authors.yml
+author: stefaanh
+
+# This URL is the main address for absolute links. Don't include a slash at the end.
+#
+url: 'https://hetbeleefdegenot.minimoa.net'
+baseurl: '/hbg'
+
+# This is for the editing function in _/includes/improve_content
+# Leave it empty if your site is not on GitHub/GitHub Pages
+improve_content:
+
+# This URL points directly to the images directory making
+# things easier to link to images in posts and templates. It needs a slash at the end.
+#
+# Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
+# Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
+#
+urlimg: 'https://hetbeleefdegenot.minimoa.net/hbg/images'
+
+#
+#       ____       ____            ____
+#      / __ \___  / __/___ ___  __/ / /_
+#     / / / / _ \/ /_/ __ `/ / / / / __/
+#    / /_/ /  __/ __/ /_/ / /_/ / / /_
+#   /_____/\___/_/  \__,_/\__,_/_/\__/
+#
+# Default Settings
+
+defaults:
+  -
+    scope:
+      path: '' 				# an empty string here means all files in the project
+      type: 'pages'
+    values:
+      show_meta: false 	# Hide metadata for all pages
+      # sidebar:    		# Possible values › left, right › by default there will be no sidebar
+      comments: false
+      author: stefaanh     # Default author for pages
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+      show_meta: true   # Show metadata for all posts
+      # sidebar:        # Possible values › left, right › by default there will be no sidebar
+      comments: false
+      author: stefaanh     # Default author for posts
+
+
