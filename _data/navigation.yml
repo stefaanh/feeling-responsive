@@ -1,73 +1,60 @@
-- title: Start
+- title: HBG
   url: "/"
   side: left
 
-- title: Getting Started
-  url: "/getting-started/"
+- title: "Te Beleven"
+  url: "/te-beleven/"
   side: left
 
-- title: "Templates"
-  url: "/design/"
-  side: left
-  dropdown:
-  - title: "Grid & Colors"
-    url: "/design/grid/"
-  - title: "Typography"
-    url: "/design/typography/typography/"
-  - title: "Page/Post"
-    url: "/design/page/"
-  - title: "Post-Left-Sidebar"
-    url: "/design/post-left-sidebar/"
-  - title: "Post-Right-Sidebar"
-    url: "/design/post-right-sidebar/"
-  - title: "Page Full-Width"
-    url: "/design/page-fullwidth/"
-  - title: "Blog-Page"
-    url: "/blog/"
-  - title: "Video"
-    url: "/design/video/"
-  - title: "Gallery"
-    url: "/design/gallery/"
-  - title: "Portfolio"
-    url: "/design/portfolio/"
-
-- title: "Header Styles"
-  url: "/headers/"
+- title: "Beleefd!"
+  url: "/beleefd/"
   side: left
   dropdown:
-  - title: "Header with Full-Width-Image"
-    url: "/design/header-full-width-image/"
-  - title: "Header with Image and Pattern"
-    url: "/design/header-image-pattern/"
-  - title: "Header with image and color"
-    url: "/design/header-image-color/"
-  - title: "Header Only With Logo"
-    url: "/design/header-logo-only/"
-  - title: "Header With Text"
-    url: "/design/header-with-text/"
-  - title: "No Header"
-    url: "/design/no-header/"
-  - title: "No Header but Image"
-    url: "/design/no-header-but-image/"
+  - title: "Thema's"
+    url: "/beleefd/thema-s/"
 
-- title: Documentation
-  url: "/documentation/"
+- title: "Publicaties"
+  url: "/publicaties/"
   side: left
   dropdown:
-  - title: "Changelog"
-    url: "/changelog/"
-  - title: "Roadmap"
-    url: "/roadmap/"
+  - title: "De Toverberg"
+    url: "/publicaties/de-toverberg/"
+  - title: "Het Favoriete Boek"
+    url: "/publicaties/favoriete-boek/"
 
-- title: Blog
-  url: "/blog/"
+- title: "De mensen"
+  url: "/mensen/"
   side: left
   dropdown:
-  - title: "Blog Archive"
-    url: "/blog/archive/"
+  - title: "Sprekers"
+    url: "/mensen/sprekers/"
+  - title: "Kunstenaars"
+    url: "/mensen/kunstenaars/"
+  - title: "Auteurs"
+    url: "/mensen/auteurs/"
 
-- title: "Search"
-  url: "/search/"
+# - title: Blog
+#   url: "/blog/"
+#   side: left
+#   dropdown:
+#   - title: "Blog Archief"
+#     url: "/blog/archief/"
+
+- title: "Info"
+  url: "/info/"
+  side: right
+  dropdown:
+  - title: "Doelstellingen"
+    url: "/info/doelstellingen/"
+  - title: "Lid worden"
+    url: "/info/lidmaatschap/"
+  - title: "Geschiedenis"
+    url: "/info/geschiedenis/"
+  - title: "Wie is Wie"
+    url: "/info/bestuur/"
+
+- title: "Zoeken"
+  url: "/zoeken/"
   side: right
 
 - title: "Contact"

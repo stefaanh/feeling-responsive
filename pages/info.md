@@ -1,61 +1,33 @@
 ---
 layout: page
-title: "About"
-subheadline: "Why another Jekyll Theme?"
-teaser: "Since years I am programming and designing websites. I love to work with open source tools and learn via code from others. This time I want to try to give something back..."
+title: "Het Beleefde Genot"
+subheadline: "Even voorstellen..."
+teaser: 'Een groepje enthousiaste cultuur- en literatuurliefhebbers die u graag laten meegenieten van het schone en het goede door de mens voortgebracht.'
 permalink: "/info/"
-header:
-    image_fullwidth: "header_drop.jpg"
+header: no
+#    image_fullwidth: "header_drop.jpg"
+image:
+    title: Groepsfoto HBG Namen 20-08-11.jpg
+    caption: "foto : Stefaan Huysentruyt 2011"
+    caption_url: "/images/Groepsfoto HBG Namen 20-08-11.jpg"
+breadcrumb: true
 ---
-...and learn at the same time.
+> Ieder mens die genoegen schept in het voltooien van zijn taak is een kunstenaar; welke ook die taak is en hoe nederig ze ook is, hij brengt een kunstwerk tot stand. De toetssteen is **het beleefde genot**, het plezier, de perfectie: het overtuigend resultaat!”  
+<cite>Henry Van De Velde[^1]</cite>
 
-*Feeling Responsive* is my first theme which I let into the world. It's built on work and knowledge of others. While I am still designing it, you read about whats behind this theme in the – *hopefully* – near future.
+ 
+Het Beleefde Genot stelt zich tot doel het culturele en literaire leven te stimuleren.
 
+We doen dit door het organiseren van activiteiten zoals lezingen, uitstappen, literaire salons, filmvertoningen, tentoonstellingen, wedstrijden enz.
+ 
+Wij wensen zoveel mogelijk mensen te laten genieten van culturele uitingen van een hoog niveau die niet onmiddellijk voorhanden zijn in onze directe omgeving. Daarnaast willen wij impulsen geven om het literaire beleven te bevorderen.
+ 
+Statuten van Het Beleefde Genot vzw, zijn bij oprichting
+verschenen in het [Belgisch Staatsblad van 6 december 2007][1].
 
-## Features
+[^1]: Samen met Victor Horta geldt Van de Velde als een der belangrijkste vertegenwoordigers van de art nouveau.
 
-* [Responsive Gallery][8], [Videos][9], [Grid][10], [Typography][11],...
-* 100% GitHub Pages friendly
-* Easy editable navigation, footer and social media links
-* Language Ready – just translate one file.
-* Lots of possibilities to customize it to your needs
-* Lots of different headers
-* Various post formats to let your content shine
-* Uses Jekyll 3.0
-* Multiple possibilities to use images in different ways
-* Fine typography
-* Play Video and Audio with [Mediaelement.js][12]
-
-
-
-## I got inspired by...
-
-[Michael Rose][1] and his fabulous [themes for jekyll][2]. Authors of [A List Apart][4] and [Smashing Magazine][5] since 2002. [GitHub][6] and how they built such a habitat for cooperation worldwide. [Automattic][3] and how they built a fantastic community around WordPress. And many, many more...
-
-Please make *Feeling Responsive* yours and if you like it, please link back to my homebase <a href="http://phlow.de/">Phlow</a>. That would be awesome.
-
-#### Since then, fork it!
-
-Yours sincerelly, [Moritz »mo.« Sauer][7]
-
-
- [1]: http://mademistakes.com/about/
- [2]: http://mademistakes.com/work/jekyll-themes/
- [3]: http://automattic.com/
- [4]: http://alistapart.com/
- [5]: http://www.smashingmagazine.com/
- [6]: https://github.com/
- [7]: http://sauer.io
- [8]: {{ site.url }}/design/gallery/
- [9]: {{ site.url }}/design/video/
- [10]: {{ site.url }}/design/grid/
- [11]: {{ site.url }}/design/typography/
- [12]: {{ site.url }}/design/mediaelement_js/
- [13]: #
- [14]: #
- [15]: #
- [16]: #
- [17]: #
- [18]: #
- [19]: #
- [20]: #
+ [1]: http://www.ejustice.just.fgov.be/tsv_pdf/2007/12/06/07176094.pdf
+ [2]: http://www.ejustice.just.fgov.be/tsv_pdf/2007/12/06/07176094.pdf
+ [3]: https://www.staatsbladmonitor.be/bedrijfsfiche.html?ondernemingsnummer=0893747805#publicaties
+ [4]: https://hetbeleefdegenot.be/Groepsfoto%20HBG%20Namen%2020-08-11.jpg "foto : Stefaan Huysentruyt 2011"

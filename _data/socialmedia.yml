@@ -1,27 +1,22 @@
-- name: GitHub
-  url: http://github.com/phlow
-  class: icon-github
-  title: Code und mehr...
+- name: GitLab
+  url: http://gitlab.com/hetbeleefdegenot
+  class: icon-gitlab
+  title: "De broncode en nog meer..."
 
 - name: YouTube
-  url: http://www.youtube.com/PhlowMedia
+  url: http://www.youtube.com/
   class: icon-youtube
-  title: "Videos, Video-Anleitungen und Filme von Phlow auf YouTube"
+  title: ""
 
-- name: Twitter
-  url: http://twitter.com/phlow
-  class: icon-twitter
-  title: "Immer das Neuste von Phlow gibt es auf Twitter"
+# - name: Twitter
+#   url: http://twitter.com/
+#   class: icon-twitter
+#   title: ""
 
-- name: Mixcloud
-  url: http://www.mixcloud.com/phlow/
-  class: icon-cloud
-  title: "Mixe, was sonst?"
-
-- name: Phlow YouTube Google+
-  url: https://plus.google.com/u/0/+Phlow
-  class: icon-googleplus
-  title: "YouTube Google+"
+# - name: Mixcloud
+#   url: http://www.mixcloud.com/
+#   class: icon-cloud
+#   title: ""
 
 # - name: Facebook
 #   url: http://www.facebook.com/
