@@ -1,0 +1,22 @@
+{% capture vandaag %}{{ "now" | date: '%s' | divided_by: 86400 }}{% endcapture %}
+
+{% assign activiteiten = site.activiteiten %}
+{% for activiteit in activiteiten %}
+  {% capture activiteit-dag %}{{ activiteit.timestamp | date: '%s' | divided_by: 86400}}{% endcapture %}
+  {% if vandaag <= activiteit-dag %}
+  <div class="row">
+    <div class="small-12 columns b60">
+      <p>{{activiteit.timestamp | date: "%A %d-%m-%Y %H:%M"}}</p>
+      <p class="subheadline">{{ activiteit.categories | join: ' &middot; ' | prepend: '<span class="subheader">' | append: '</span>' }}{% if activiteit.categories != empty and activiteit.subheadline != NULL %} – {% endif %}{{ activiteit.subheadline }}</p>
+      <h2><a href="{{ site.url }}{{ site.baseurl }}{{ activiteit.url }}">{{ activiteit.title }}</a></h2>
+      <p>
+        {% if activiteit.image.thumb %}<a href="{{ site.url }}{{ site.baseurl }}{{ activiteit.url }}" title="{{ activiteit.title | escape_once }}"><img src="{{ site.urlimg }}{{ activiteit.image.thumb }}" class="alignleft" width="150" height="150" alt="{{ page.title | escape_once }}"></a>{% endif %}
+
+        {% if activiteit.meta_description %}{{ activiteit.meta_description | strip_html | escape }}{% elsif activiteit.teaser %}{{ activiteit.teaser | strip_html | escape }}{% endif %}
+
+        <a href="{{ site.url }}{{ site.baseurl }}{{ activiteit.url }}" title="{{ site.data.language.read }} {{ activiteit.title | escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a>
+      </p>
+    </div><!-- /.small-12.columns -->
+  </div>
+  {% endif %}<!-- /.row -->
+{% endfor %}

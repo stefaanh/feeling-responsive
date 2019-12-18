@@ -1,0 +1,49 @@
+{% comment %}
+*
+*  This include lets you integrate a person vignette in your page or sidebar.
+*   To use the gallery include you...
+*
+*   1. ...need two images: a thumbnail and a big image.
+*   2. Name the thumbnail gallery-image-thumb.jpg and...
+*   3. ...name the big gallery-image.jpg
+*   4. Define the big version in frontmatter,
+*
+*   gallery:
+*       - image_url: gallery-image.jpg
+*
+*   5. Give your image a caption – works without captions, too.
+*
+*   gallery:
+*       - image_url: gallery-image.jpg
+*          caption: Starting Page with huge One Logo
+*
+*   6. Add the include wherever you want in your content like this:
+*
+*   {% include gallery %}
+*
+*   Check out the example page › http://phlow.github.io/feeling-responsive/design/gallery/
+*
+{% endcomment %}
+<div class="panel radius">
+	{%- assign
+	  persoonpagina = site.personen
+	    | where: "persoon", include.persoon
+	    | first
+	-%}
+  <h3>
+	{%- if persoonpagina -%}
+		<a href="{{ persoonpagina.url }}">{{persoon.naam }}</a>
+	{%- else -%}
+		{{persoon.naam }}
+	{%- endif -%}
+	</h3>
+	<p>{% capture url %}{{ persoon.image_url }}{% endcapture %}
+	{% assign split_url = url | split: '.' %}
+	{% capture thumb_url %}{{split_url[0]}}-thumb.{{split_url[1]}}{% endcapture %}
+		<a href="{{ site.urlimg }}/persoon/{{ persoon.image_url }}">
+			<img {% if persoon.caption %}data-caption="{{ persoon.caption }}"{% endif %}
+				src="{{ site.urlimg }}/persoon/{{ thumb_url }}"
+				alt="{{ persoon.caption }}">
+		</a>
+		{% if persoon.bio %}<br/>{{persoon.bio | markdownify}}{% endif %}</p>
+</div>

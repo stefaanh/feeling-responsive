@@ -2,16 +2,23 @@
   url: "/"
   side: left
 
-- title: "Te Beleven"
-  url: "/te-beleven/"
-  side: left
-
-- title: "Beleefd!"
-  url: "/beleefd/"
+- title: "Activiteiten"
+  url: "/activiteiten/"
   side: left
   dropdown:
+  - title: "Te Beleven"
+    url: "/te-beleven/"
+  - title: "Beleefd!"
+    url: "/beleefd/"
   - title: "Thema's"
     url: "/beleefd/thema-s/"
+
+- title: Blog
+  url: "/blog/"
+  side: left
+  dropdown:
+  - title: "Blog Archive"
+    url: "/blog/archive/"
 
 - title: "Publicaties"
   url: "/publicaties/"

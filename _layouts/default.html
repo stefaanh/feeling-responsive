@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!doctype html>
-<html class="no-js" lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
+<html class="no-js" lang="{% if site.language == nil %}nl{% else %}{{ site.language }}{% endif %}">
 <head>
 	{% include _head.html %}
 </head>
@@ -13,7 +13,6 @@ layout: compress
 
 	{% include _masthead.html %}
 	{{ content }}
-
 	{% unless page.skip_boilerplate %}
 	{% include _footer.html %}
 	{% endunless %}

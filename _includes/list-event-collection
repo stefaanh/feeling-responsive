@@ -1,0 +1,43 @@
+{% comment %}
+*
+*   This include lets you loop through an event-collection to list
+*   all entries in that collection.
+*
+*   The event should have a 'timestamp' in the frontmatter for the day (and time) of the event
+*
+*   The collection can be filtered using the timespan parameter.
+*   * timespan='past'
+*   * timespan='future'
+*   * any other value or nil will show all events.
+*
+*   If you set »published: false« in front matter of a collection page
+*   the page gots filtered out via unless
+*
+*   Example: {% include list-event-collection events='wordpress' timespan='past' %}
+*
+{% endcomment %}
+
+{% capture last_midnight %}{{ "now" | date: '%s' | divided_by: 86400 }}{% endcapture %}
+
+{% if include.timespan != 'future' %}
+  {% assign events = site.[include.events]  | sort: "timestamp" | reverse %}
+{% else %}
+  {% assign events = site.[include.events]  | sort: "timestamp" %}
+{% endif %}
+<ul class="side-nav">
+  {% for event in events %}
+    {% capture event-timestamp %}{{ event.timestamp | date: '%s' }}{% endcapture %}
+    {% if (inlude.timespan == '')
+      or (!inlude.timespan )
+      or (inlude.timespan == 'past' and last_midnight > event-timestamp)
+      or (inlude.timespan == 'future' and last_midnight <= event-timestamp)
+      %}
+    <li>{{ event.timestamp | date: "%d-%m-%Y %H:%M"}}<br/>
+      <a href="{{ site.url }}{{ event.url }}">
+        {{ event.title }}</a><br/>
+        {{ event.teaser }}
+    </li>
+    <li>&nbsp;</li>
+    {% endif %}
+  {% endfor %}
+</ul>

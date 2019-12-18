@@ -1,6 +1,6 @@
 - name: GitLab
   url: http://gitlab.com/hetbeleefdegenot
-  class: icon-gitlab
+  class: icon-code
   title: "De broncode en nog meer..."
 
 - name: YouTube

@@ -6,14 +6,7 @@ subheadline: "Korte geschiedenis van dertien jaar HBG"
 teaser: "Na dertien jaar kunnen we terug kijken op een boeiende en bloeiende periode, 
 waarin wij – de mensen van het bestuur – veel geleerd hebben en ook veel genoten hebben, 
 dit samen met allen die deelgenomen hebben aan één of meerdere activiteiten."
-header:
-   image_fullwidth: "header_unsplash_9.jpg"
-image:
-       title: Groepsfoto HBG Namen 20-08-11.jpg
-       caption: "foto : Stefaan Huysentruyt 2011"
-       caption_url: "/images/Groepsfoto HBG Namen 20-08-11.jpg"
 permalink: "/info/geschiedenis/"
-breadcrumb: true
 ---
 ## Het Beleefde Genot leeft! 
 

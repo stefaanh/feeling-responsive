@@ -31,11 +31,11 @@ feed {
 		font-size: $font-size-h1 * 1.5;
 		font-weight: bolder;
 		&::before {
-			content: 'Atom Feed for ';
+			content: 'Atom Feed voor ';
 			font-weight: initial;
 		}
 		&::after {
-			content: "This Atom feed is meant to be used by RSS reader applications and websites.";
+			content: "Deze Atom feed is bedoeld om gebruikt te worden door RSS reader toepassingen en websites.";
 			display: block;
 			padding: 1em;
 			background-color: $alert-color;
@@ -45,7 +45,7 @@ feed {
 			letter-spacing: initial;
 		}
 	}
-	
+
 	> id,
 	> updated,
 	> subtitle,

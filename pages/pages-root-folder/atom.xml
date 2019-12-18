@@ -14,7 +14,7 @@ permalink: /atom.xml
 	<subtitle>{{ site.description | xml_escape }}</subtitle>
 
 	{% if site.author %}
-		{% assign author = site.data.authors[site.author] %}
+		{% assign author = site.data.people[site.author] %}
 		<author>
 			{% if author.name %}
 				<name>{{ author.name | xml_escape }}</name>
@@ -43,7 +43,7 @@ permalink: /atom.xml
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
 
 			{% if post.author %}
-				{% assign author = site.data.authors[post.author] %}
+				{% assign author = site.data.people[post.author] %}
 				<author>
 					{% if author.name %}
 						<name>{{ author.name | xml_escape }}</name>

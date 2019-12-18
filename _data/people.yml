@@ -1,0 +1,42 @@
+# People Details
+#   used to be authors.yaml, changed to contain speakers, performers, etc...
+#
+# 1. Edit information below
+# 2. Change site author in config.yml
+# 3. Change default post/page authors in config.yml
+
+# shuysent: # uniek label (sleutel)
+#    name:    Stefaan Huysentruyt
+              # de volledige naam zoals die op een publicatie, site of affiche staat
+#    rollen:  redactie, spreker, dichter, schrijver, kunstenaar, voorzitter, bestuurslid, webmaster, rvb
+              # komma gescheiden termen
+#    uri:     https://www.minimoa.net/
+              # persoonlijke website of websitepagina
+#    email:   stefaan.huysentruyt@minimoa.net
+              # email adres
+#    twitter: @stefaan.huysentruyt
+              # twitter account naam
+#    image_url:
+#    image_caption:
+#    bio_kort: markdown tekst
+#
+# Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
+bmadou:
+  naam:       Bart Madou
+  rollen:     redactie, spreker, dichter, schrijver, kunstenaar, voorzitter
+  uri:        https://www.hetbeleefdegenot.be
+  email:      bart@hetbeleefdegenot.be
+  bio_kort:
+
+shuysent:
+  name:       Stefaan Huysentruyt
+  rollen:     webmaster, raad van bestuur
+  uri:        https://www.minimoa.net/
+  email:      stefaan@hetbeleefdegenot.be
+  twitter:    "@stefaan.huysentruyt"
+  bio_kort:   is software ontwikkelaar, actief in de Oxfam Wereldwinkel van Zedelgem, heeft interesse voor online privacy, impact van technologie op mens en maatschappij
+
+rcrombez:
+  name:     Robert Crombez
+  siterole: penningmeester, raad van bestuur
+  email:    robert.crombez@telenet.be

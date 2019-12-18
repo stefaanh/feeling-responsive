@@ -1,14 +1,16 @@
 ---
 layout: page
-title: "Change is good!"
-meta_title: "Feeling Responsive Theme Changelog"
-subheadline: "Feeling Responsive Theme Changelog"
-teaser: "History and changelog of Feeling Responsive Theme"
+title: "Verandering is goed!"
+meta_title: "Het Beleefde Genot site Wijzigingshistoriek"
+subheadline: "Belangrijkste veranderingen en mijlpalen van de site."
+teaser: "Historiek van de site van Het Beleefde Genot."
 header:
-   image_fullwidth: "header_unsplash_9.jpg"
+   image_fullwidth: "chris-lawton-154388-unsplash.jpg"
+   caption: Photo by Chris Lawton on Unsplash
+   caption_url: https://unsplash.com/photos/5IHz5WhosQE
 permalink: "/changelog/"
 ---
-2015-11-10 // Version 1.91
+<!-- 2015-11-10 // Version 1.91
 :   I added a nasty hack to highlight the homepage in the topbar navigation. To do it, you have to add `homepage: true` to your homepage. The pages *404* and *search* are now excluded from the sitemap.
 
 2015-10-29 // Version 1.9
@@ -41,15 +43,15 @@ permalink: "/changelog/"
 2015-03-25  // Video
 :   Made a new [video tutorial](https://www.youtube.com/embed/rLS-BEvlEyY)
 
-<div class="flex-video"><iframe width="1280" height="720" src="https://www.youtube.com/embed/rLS-BEvlEyY" frameborder="0" allowfullscreen></iframe></div><!-- /.flex-video -->
+<div class="flex-video"><iframe width="1280" height="720" src="https://www.youtube.com/embed/rLS-BEvlEyY" frameborder="0" allowfullscreen></iframe></div><!-- /.flex-video - ->
 
 2015-03-02 // Version 1.1
 :   Added [Foundation Reveal](http://foundation.zurb.com/docs/components/reveal.html) to the mix to show videos and content in a popup window. <a href="#" data-reveal-id="videoModal">Try it out right know :)</a>
 
 2015-02-26 // Version 1.0
-:   OK. Let's try it. Here is *Feeling Responsive* Version 1.0, with a shiny video.
+:   OK. Let's try it. Here is *Feeling Responsive* Version 1.0, with a shiny video. - ->
 
-<div class="flex-video"><iframe width="1280" height="720" src="https://www.youtube.com/embed/3b5zCFSmVvU" frameborder="0" allowfullscreen></iframe></div><!-- /.flex-video -->
+<div class="flex-video"><iframe width="1280" height="720" src="https://www.youtube.com/embed/3b5zCFSmVvU" frameborder="0" allowfullscreen></iframe></div><!-- /.flex-video - ->
 
 
 2015-02-25 // Version 0.99.1
@@ -107,27 +109,17 @@ permalink: "/changelog/"
 :   Updated Navigation & Social Media-Configuration via custom data in `_data`
 
 2014-07-07 // Version 0.1
-:   Start of theme coding and development.
+:   Start of theme coding and development.-->
 
-2014-06-23
-:   First Ideas and scribbles at the beach in [Bergen/Netherlands][6].
-
-
-
-<div id="videoModal" class="reveal-modal large" data-reveal="">
-  <div class="flex-video widescreen vimeo" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/3b5zCFSmVvU" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
+2018-11-20 // Versie 0
+:   Eerste pogingen en testen [Veldegem][6].
 
  [1]: {{ site.url }}/blog/
  [2]: {{ site.url }}/blog/archive/
  [3]: http://foundation.zurb.com/docs/components/accordion.html
  [4]: {{ site.url }}/design/gallery/
  [5]: {{ site.url }}/design/video/
- [6]: https://www.google.de/maps/place/Strandpaviljoen+Joep+B.V./@51.9960733,5.830135,6z/data=!4m2!3m1!1s0x47cf5918df69093b:0x7c11ab31102c1c8a
+ [6]: https://nl.wikipedia.org/wiki/Veldegem
  [7]: fontcustom.com
  [8]: https://www.tawk.to
  [9]: https://github.com/jjamor

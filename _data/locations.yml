@@ -1,0 +1,24 @@
+gemeentehuis_loppem:
+  naam: "Gemeentehuis Loppem"
+  adres: "Dorp 1, 8210 Loppem"
+  embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5004.889528376642!2d3.191193331593131!3d51.15558930000085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3516fcd826ea5%3A0x139c0c3b6f040501!2sGemeentehuis+Loppem!5e0!3m2!1snl!2sbe!4v1555534538142!5m2!1snl!2sbe" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>'
+
+braambeier:
+  naam: "De Braambeier"
+  adres: "Loppemstraat 14A, 8210 Zedelgem"
+  embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5006.181207776567!2d3.1389713252634386!3d51.14368029059611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3520f20fe4fc5%3A0x9dc29e761c83adb3!2sDe+Braambeier%2C+dienstencentrum!5e0!3m2!1sen!2sbe!4v1555533271470!5m2!1sen!2sbe" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>'
+
+regina_coeli:
+  naam: "WZC Regina Coeli"
+  adres: "Koning Leopold III-laan 4, 8200 Sint-Andries"
+  embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2500.2410380323445!2d3.1796514157538986!3d51.19621007958515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3516a35135bb7%3A0xa7471c5c785df0fb!2sRegina+Coeli+-+Woon+En+Zorgcentrum+Voor+Senioren!5e0!3m2!1snl!2sbe!4v1555534641646!5m2!1snl!2sbe" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>'
+
+groene_meersen:
+  naam: "De Groene Meersen"
+  adres: "Stadionlaan 48, 8210 Zedelgem"
+  embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5006.617122443069!2d3.1479521315925965!3d51.13966080000075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c35200ffe69dd5%3A0x881d6d4da7f93f84!2sDe+Groene+Meersen!5e0!3m2!1snl!2sbe!4v1555534718946!5m2!1snl!2sbe" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>'
+
+glaz:
+  naam: "GlaZ"
+  adres: "Torhoutsesteenweg 52A, 8210 Loppem"
+  embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.0387905776674!2d3.1597726157520087!3d51.1446357795771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c351fbd06f7569%3A0x1692928ac57011a1!2sTorhoutsesteenweg+52%2C+8210+Zedelgem!5e0!3m2!1snl!2sbe!4v1555535375905!5m2!1snl!2sbe" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>'

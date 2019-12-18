@@ -1,0 +1,15 @@
+<aside>
+	{% for person in page.persons %}
+		{% include person {{site.data.persons['{{person}}']}} %}
+	{% endif %}
+	{% if page.location %}
+		{% include location {{site.data.locations['{{location}}']}} %}
+	{% endif %}
+	{% if page.timestamp %}
+		{% include location {{site.data.locations['{{location}}']}} %}
+	{% endif %}
+	{% if include.fee %}
+		{% include fee {{site.data.locations['{{include.fee}}']}} %}
+	{% endif %}
+
+</aside>
