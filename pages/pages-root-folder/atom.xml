@@ -6,6 +6,7 @@ permalink: /atom.xml
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="{{ site.baseurl }}/assets/xslt/atom.xslt" ?>
 <?xml-stylesheet type="text/css" href="{{ site.baseurl }}/assets/css/atom.css" ?>
+{%- assign url = site.baseurl | prepend: site.url -%}
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>{{ site.url }}{{ site.baseurl }}/</id>
 	<title>{{ site.title | xml_escape }}</title>
@@ -14,7 +15,7 @@ permalink: /atom.xml
 	<subtitle>{{ site.description | xml_escape }}</subtitle>
 
 	{% if site.author %}
-		{% assign author = site.data.people[site.author] %}
+		{% assign author = site.data.authors[site.author] %}
 		<author>
 			{% if author.name %}
 				<name>{{ author.name | xml_escape }}</name>
@@ -22,7 +23,7 @@ permalink: /atom.xml
 				<name>{{ site.author | xml_escape }}</name>
 			{% endif %}
 			{% if author.email %}
-				<email>{{ author.email | xml_escape }}</email>
+				<email>{{ author.email | encode_email | xml_escape }}</email>
 			{% endif %}
 			{% if author.uri %}
 				<uri>{{ author.uri | xml_escape }}</uri>
@@ -43,7 +44,7 @@ permalink: /atom.xml
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
 
 			{% if post.author %}
-				{% assign author = site.data.people[post.author] %}
+				{% assign author = site.data.authors[post.author] %}
 				<author>
 					{% if author.name %}
 						<name>{{ author.name | xml_escape }}</name>

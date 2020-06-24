@@ -1,0 +1,54 @@
+{% comment %}
+  Required parameters
+    'from': a timestamp
+    'until': a timestamp
+  Optionally parameter 'format': 
+    one of 'lang' or 'kort' 
+    or a date format as from Ruby strftime
+  
+   See also the includes "format/date" and "format/time"
+  
+{% endcomment %}
+{%- assign fromday = include.from | date format:'%F' -%}
+{%- assign untilday = include.until | date format:'%F' -%}
+{%- case include.format -%}
+	 {%- when 'lang' -%}
+     {%- capture periode %}
+     van
+  			{% include format/date timestamp=include.from format=site.date_longnames %}
+  			{% include format/time timestamp=include.from format=include.format %}
+        tot 
+        {%- if untilday != fromday -%}
+        {% include format/date timestamp=include.until format=site.date_longnames %}
+        {%- endif -%}
+  			{% include format/time timestamp=include.until format=include.format %}    
+    {% endcapture -%}
+    {{ periode | strip }}
+	{%- when 'kort' -%}
+    {%- capture periode %}
+    van
+       {% include format/date timestamp=include.from format=site.date_shortnames %}
+       {% include format/time timestamp=include.from format=include.format %}
+       {{ ' tot ' }}
+       {%- if untilday != fromday -%}
+          {% include format/date timestamp=include.until format=site.date_shortnames %}
+       {%- endif -%}
+       {% include format/time timestamp=include.until format=include.format %}    
+     {% endcapture -%}
+     {{ periode | strip }}
+	{%- when nil -%}
+    {%- capture periode %}
+       {% include format/date timestamp=include.from %}
+       {% include format/time timestamp=include.from %}
+       - 
+       {%- if untilday != fromday -%}
+       {% include format/date timestamp=include.until %}
+       {%- endif -%}
+       {% include format/time timestamp=include.until %}    
+    {% endcapture -%}
+    {{ periode | strip }}
+	{%- else -%}
+    {{ include.from | date: include.format }}
+    -
+    {{ include.until | date: include.format }}
+{%- endcase -%}

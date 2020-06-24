@@ -1,0 +1,60 @@
+{% comment %}
+Rendert uur en minuten als tekst in een lang, kort en standaard formaat
+Toont niks indien uur en minuut 0 zijn.
+
+* parameters:
+  - timestamp: date serial
+  - format: one of
+        - "lang"
+        - "kort"
+        - Ruby Time.parse string.
+        - when ommitted, falls back to default format "%H:%M"
+
+* voorbeeld 1
+		gegeven: event.timestamp = "2019-03-03 10:30"
+		tag: {% include format/time timestamp=event.timestamp format="lang" %}
+		rendering: "om 10 u. 30"
+    
+* voorbeeld 2
+		gegeven: event.timestamp = "2019-03-03 10:00"
+		tag: {% include format/time timestamp=event.timestamp format="lang" %}
+		rendering: "om 10 uur"
+
+* voorbeeld 3
+  	gegeven: event.timestamp = "2019-03-03 10:30"
+		tag: {% include format/time timestamp=event.timestamp format="kort" %}
+		rendering: "10:30"
+
+* voorbeeld 3
+  	gegeven: event.timestamp = "2019-03-03 10:00"
+		tag: {% include format/time timestamp=event.timestamp format="kort" %}
+		rendering: "10:00"
+
+* voorbeeld 4
+	  gegeven: event.timestamp = "2019-03-03 00:00"
+		tag: {% include format/time timestamp=event.timestamp format="kort" %}
+		rendering: ""
+    
+* voorbeeld 5
+	  gegeven: event.timestamp = "2019-03-03 00:00"
+		tag: {% include format/date timestamp=event.timestamp format="(%H:%M)" %}
+		rendering: "(00:00)"
+
+* voorbeeld 6
+	  gegeven: event.timestamp = "2019-03-03 00:00"
+    tag: {% include format/time timestamp=event.timestamp %}
+		rendering: "00:00"
+
+{% endcomment %}
+{%- assign hh = include.timestamp | date: "%H" | plus: 0 -%}
+{%- assign mm = include.timestamp | date: "%M" | plus: 0 -%}
+{%- case include.format -%}
+	{%- when 'lang' -%}
+		{% if hh > 0 %}om {{ hh }}{% if mm > 0 %} u. {{ mm }}{% else %} uur{% endif %}{% endif %}
+	{%- when 'kort' or nil -%}
+		{%- if hh > 0 or mm > 0 -%}
+			{{ include.timestamp | date: "%H:%M" }}
+		{%- endif -%}
+	{%- else -%}
+		{{ include.timestamp | date: include.format }}
+{%- endcase -%}

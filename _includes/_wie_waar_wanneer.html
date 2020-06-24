@@ -1,0 +1,24 @@
+<aside>
+  {%- if page.gast.persoon -%}
+    {% include wie.html rol=page.gast.rol wie=page.gast.persoon %}
+  {% elsif page.gast.size > 0 %}
+    {% for gast in page.gast %}
+      {% include wie.html rol=gast.rol wie=gast.persoon %}
+    {% endfor %}
+  {%- endif -%}
+  {%- if page.location -%}
+    {% include waar.html location=page.location%}
+  {%- endif -%}
+  {% include wanneer.html timestamp=page.timestamp %}
+	{% if page.timestamp %}
+	<div class="panel radius">
+		<h3>{{site.data.language.when}}</h3>
+		<p>{%- include format/date timestamp=page.timestamp format=site.date_longnames -%}<br>
+		{%- include format/time timestamp=page.timestamp format="lang"-%} </p>
+	</div>
+	{% endif %}
+	{% if include.fee %}
+  <p>Include Fee</p>
+	{% endif %}
+
+</aside>

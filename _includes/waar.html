@@ -1,0 +1,37 @@
+{% comment %}
+*  Dit integreert een locate in een sidebar of pagina.
+*   Wat heb je nodig:
+*
+*   1. de naam van de locatie in je pagina.
+*      VB: braambeier
+*   2. de foto die de naam heeft van de locatie in de resource folder images/locations
+*      VB: braambeier.jpg
+*   3. de locatie data in _data/locations.yml
+*      VB:
+*          braambeier:
+*              naam: "De Braambeier"
+*              adres: "Loppemstraat 14A, 8210 Zedelgem"
+*   4. optioneel de coördinaten van de locatie voor de kaart
+*      VB:
+*          coords:
+*              latitude: 51.1437476
+*              longitude: 3.1407094
+{% endcomment %}
+<div class="panel radius">
+  <h3>
+	{%- if persoonpagina -%}
+		<a href="{{ persoonpagina.url }}">{{persoon.naam }}</a>
+	{%- else -%}
+		{{persoon.naam }}
+	{%- endif -%}
+	</h3>
+	<p>{% capture url %}{{ persoon.image_url }}{% endcapture %}
+	{% assign split_url = url | split: '.' %}
+	{% capture thumb_url %}{{split_url[0]}}-thumb.{{split_url[1]}}{% endcapture %}
+		<a href="{{ site.urlimg }}/persoon/{{ persoon.image_url }}">
+			<img {% if persoon.caption %}data-caption="{{ persoon.caption }}"{% endif %}
+				src="{{ site.urlimg }}/persoon/{{ thumb_url }}"
+				alt="{{ persoon.caption }}">
+		</a>
+		{% if persoon.bio %}<br/>{{persoon.bio | markdownify}}{% endif %}</p>
+</div>

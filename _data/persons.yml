@@ -1,0 +1,40 @@
+# People Details
+#   derived from authors.yaml, added to contain speakers, performers, etc...
+# Mogelijks gaat dit naar een collection document ipv _data
+#
+# shuysent: # uniek label (sleutel)
+#    titel:   Nerd 
+              # Eventuele titel.
+#    voornaam:    Stefaan 
+#    name:    Huysentruyt
+              # de volledige naam zoals die op een publicatie, site of affiche staat
+#    roles:  redactie, spreker, dichter, schrijver, kunstenaar, voorzitter, bestuurslid, webmaster
+              # komma gescheiden termen
+#    uri:     https://www.minimoa.net/
+              # persoonlijke website of websitepagina
+#    email:   stefaan [punt] huysentruyt [apestaart] minimoa [punt] net
+              # email adres
+#    twitter: @stefaan.huysentruyt
+              # twitter account naam
+#    image_url:
+#    image_caption:
+#    bio_kort: markdown tekst
+#
+# Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
+peterdesmet: 
+  voornaam:  Peter
+  name:       De Smet
+  bio-kort:
+jurgenpieters:
+  titel:  Professor
+  voornaam:   Jurgen
+  name:  Pieters
+  bio-kort:
+
+bmadou:
+  voornaam: Bart    
+  name:  Madou   
+annmeskens:
+  titel:  filosofe
+  voornaam: Ann 
+  name: Meskens

@@ -1,9 +1,6 @@
----
----
 {% comment %}
 *
 *  This include lets you integrate a person vignette in your page or sidebar.
-*   To use the gallery include you...
 *
 *   1. ...need two images: a thumbnail and a big image.
 *   2. Name the thumbnail gallery-image-thumb.jpg and...
@@ -26,19 +23,9 @@
 *   Check out the example page › http://phlow.github.io/feeling-responsive/design/gallery/
 *
 {% endcomment %}
-{%- assign
-	persoonpagina = site.personen
-		| where: "persoon", include.persoon
-		| first
--%}
-{%- if persoonpagina -%}
 <div class="panel radius">
   <h3>
-	{%- if persoonpagina -%}
-		<a href="{{ persoonpagina.url }}">{{persoon.naam }}</a>
-	{%- else -%}
-		{{persoon.naam }}
-	{%- endif -%}
+		{{site.data.persons[include.naam].voornaam}}		{{site.data.persons[include.naam].name}}
 	</h3>
 	<p>{% capture url %}{{ persoon.image_url }}{% endcapture %}
 	{% assign split_url = url | split: '.' %}
@@ -48,5 +35,5 @@
 				src="{{ site.urlimg }}/persoon/{{ thumb_url }}"
 				alt="{{ persoon.caption }}">
 		</a>
-		{% if persoon.bio %}<br/>{{persoon.bio | markdownify}}{% endif %}</p>
+		{% if persoon.bio %}<br/>{{persoon.bio | markdownify}} {% endif %}</p>
 </div>

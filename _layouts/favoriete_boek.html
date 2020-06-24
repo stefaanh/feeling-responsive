@@ -1,0 +1,51 @@
+---
+layout: default
+format: post
+categories:
+    - favoriete boek
+---
+
+<div class="row t30">
+	<div class="medium-8 columns">
+		<article>
+			<header>
+        <p class="subheadline">{{ layout.categories | join: ' &middot; ' | prepend: '<span class="subheader">' | append: '</span>' }}{% if layout.categories != empty and page.subheadline != NULL %} – {% endif %}{{ page.subheadline }}</p>
+				<h1>{{ page.title }}</h1>
+			</header>
+
+			{% if page.teaser %}
+			<p class="teaser">
+				{{ page.teaser | markdownify }}
+			</p>
+			{% endif %}
+      {% unless page.image.src %}
+        <div>
+          <p>
+            <img src="{{ site.urlimg }}{{ page.image.src }}" 
+            width="100%" 
+            alt="{{ page.title | escape_once }}"
+            title="{{ page.title | escape_once }}"
+            >
+      		</p>
+          {% if page.image.caption_url and page.image.caption %}
+        		<p class="text-right caption">
+        			<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+        		</p>
+          {% elsif page.image.caption %}
+        		<p class="text-right caption">
+        			{{ page.image.caption }}
+        		</p>
+    		  {% endif %}
+        </div>
+      {% endunless %}  
+			{{ content }}
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+	{% if page.sidebar == "right" %}
+    <div class="medium-4 columns">
+    	{% include_relative include/_sidebar.html %}
+    </div><!-- /.medium-4.columns -->
+	{% endif %}
+
+</div><!-- /.row -->

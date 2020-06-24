@@ -2,49 +2,52 @@
 layout: default
 format: post
 ---
-{% if page.image.title %}
-<div class="row t30">
-	<div class="small-12 columns">
-		<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}">
-		{% if page.image.caption_url and page.image.caption %}
-		<p class="text-right caption">
-			<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
-		</p>
-		{% endif %}
-	</div><!-- /.small-12.columns -->
-</div><!-- /.row -->
-{% endif %}
-
-
 <div class="row t30">
 	<div class="medium-8 columns">
 		<article>
 			<header>
 				{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
 				<h1>{{ page.title }}</h1>
+        <p class="text-right caption">
+          {%- assign person=site.data.persons[page.gast.persoon] -%}
+    			{{ page.gast.rol | capitalize}}: {{person.titel}} {{person.voornaam}} {{person.name}}
+    		</p>
 			</header>
 
 			{% if page.teaser %}
 			<p class="teaser">
-				{{ page.teaser }}
+				{{ page.teaser | markdownify }}
 			</p>
 			{% endif %}
-
+      {% if page.gallery %}
+        {% include gallery %}
+      {% elsif page.image.src %}
+        <div>
+          <p>
+            <img src="{{ site.urlimg }}{{ page.image.src }}" 
+            width="100%" 
+            alt="{{ page.title | escape_once }}"
+            title="{{ page.title | escape_once }}"
+            >
+      		</p>
+          {% if page.image.caption_url and page.image.caption %}
+        		<p class="text-right caption">
+        			<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+        		</p>
+          {% elsif page.image.caption %}
+        		<p class="text-right caption">
+        			{{ page.image.caption }}
+        		</p>
+    		  {% endif %}
+        </div>
+      {% endif %}  
 			{{ content }}
 		</article>
 	</div><!-- /.medium-8.columns -->
 
-		{% if page.sidebar == "left" %}
-		<div class="medium-4 columns medium-pull-8">
-			{% if page.persoon %}
-					{% include persoon %}
-			{% endif %}
-			{% if page.location %}
-					{% include location %}
-			{% endif %}
-			{% if page.timestamp %}
-					{% include tijdstip %}
-			{% endif %}
+		{% if page.sidebar == "right" %}
+		<div class="medium-4 columns">
+			{% include_relative include/_wie_waar_wanneer.html %}
 		</div><!-- /.medium-4.columns -->
 		{% endif %}
 

@@ -3,8 +3,9 @@ layout: page
 title: "Lidmaatschap"
 header:
   image_fullwidth: lidmaatschap-chang-duong-398144-unsplash.jpg
-  caption: Photo by Chang Duong on Unsplash
-  caption_url: https://unsplash.com/photos/Sj0iMtq_Z4w
+  unsplash:
+    name: Chang Duong
+    username: hellochang
 meta_title: "Lid worden van Het Beleefde Genot"
 subheadline: "Lid worden van Het Beleefde Genot"
 teaser: "Door lid te worden ontvang je heel wat voordelen"
@@ -39,9 +40,7 @@ van Het Beleefde Genot met vermelding van
 
 Bijvoorbeeld:
 
-```
- Jan VandenBroecke, Ann Rockaert, janvdb@domein.be, januari
-```
+> Jan VandenBroecke, Ann Rockaert, janvdb@domein.be, januari
 
 *[IBAN]: International Bank Account Number 
 *[BIC]: Bank Identifier Code

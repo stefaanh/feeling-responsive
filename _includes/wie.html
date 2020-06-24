@@ -1,0 +1,19 @@
+  {%- assign persoon = site.mensen | where:"persoon", include.wie | first %}
+  {% unless persoon %}
+    {% assign persoon = site.data.persons[include.wie] %}
+  {% endunless -%}
+  <div class="panel radius">
+    <h4>{%- if include.rol %}{{ include.rol | capitalize }}{% endif -%}</h4> 
+    {%- if persoon.titel %}<br>{{ persoon.titel | capitalize }}{% endif -%}  
+    <h3>
+      <a href="{{persoon.url}}">{{persoon.voornaam}} {{persoon.naam}}</a>
+    </h3>
+    {%- if persoon.image %}
+      <img src="{{ site.urlimg}}{{persoon.image.src}}" alt="{{persoon.voornaam}} {{persoon.naam}}" title="{{persoon.voornaam}} {{persoon.naam}}"/>
+    {% endif -%}
+    {%- if persoon.bio_kort %}
+      <p>{{ persoon.bio_kort | markdownify }}</p>
+    {%- else %}
+      {{ persoon.content | markdownify }}
+    {% endif -%}
+  </div>

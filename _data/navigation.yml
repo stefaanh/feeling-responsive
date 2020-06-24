@@ -11,14 +11,14 @@
   - title: "Beleefd!"
     url: "/beleefd/"
   - title: "Thema's"
-    url: "/beleefd/thema-s/"
+    url: "/thema-s/"
 
 - title: Blog
   url: "/blog/"
   side: left
   dropdown:
-  - title: "Blog Archive"
-    url: "/blog/archive/"
+  - title: "Blog Archief"
+    url: "/blog/archief/"
 
 - title: "Publicaties"
   url: "/publicaties/"

@@ -1,0 +1,19 @@
+{%- comment %}
+   Required parameter 'timestamp': a timestamp
+   
+   If future timestamp, shows day of the week and hour to the date.
+   If kort is true shows short month and or day
+  
+   See also the includes "format/date" and "format/time".
+  
+{% endcomment -%}
+{%- assign middernacht = "now" | date: '%F' -%}
+<div class="panel radius">
+  {%- if include.timestamp > middernacht -%}
+    <h4>Te beleven<h4>
+    <p>{% include format/date timestamp=include.timestamp format=site.date_longnames weekdag=true %}<br>
+  {% include format/time timestamp=include.timestamp format="lang" %}</p>
+  {%- else -%}
+    <p>Beleefd op {% include format/date timestamp=include.timestamp format=site.date_longnames weekdag=true %}</p>
+  {%- endif -%}
+</div>

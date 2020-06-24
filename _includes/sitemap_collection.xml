@@ -1,4 +1,5 @@
 <!-- {{ include.name }}: {{ include.links | size }} links with priority={{ include.priority }}, changefreq={{ include.changefreq }} -->
+{% assign url = site.baseurl %}
 {% for link in include.links %}
 	{% unless link.sitemap.exclude or link.published == false %}
 	<url>

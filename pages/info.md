@@ -7,7 +7,7 @@ permalink: "/info/"
 header: no
 #    image_fullwidth: "header_drop.jpg"
 image:
-    title: Groepsfoto HBG Namen 20-08-11.jpg
+    src: Groepsfoto HBG Namen 20-08-11.jpg
     caption: "foto : Stefaan Huysentruyt 2011"
     caption_url: "/images/Groepsfoto HBG Namen 20-08-11.jpg"
 breadcrumb: true
@@ -18,7 +18,7 @@ breadcrumb: true
  
 Het Beleefde Genot stelt zich tot doel het culturele en literaire leven te stimuleren.
 
-We doen dit door het organiseren van activiteiten zoals lezingen, uitstappen, literaire salons, filmvertoningen, tentoonstellingen, wedstrijden enz.
+We doen dit door het organiseren van activiteiten zoals activiteiten, uitstappen, literaire salons, filmvertoningen, tentoonstellingen, wedstrijden enz.
  
 Wij wensen zoveel mogelijk mensen te laten genieten van culturele uitingen van een hoog niveau die niet onmiddellijk voorhanden zijn in onze directe omgeving. Daarnaast willen wij impulsen geven om het literaire beleven te bevorderen.
  

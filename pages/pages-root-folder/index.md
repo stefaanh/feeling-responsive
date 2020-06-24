@@ -11,25 +11,16 @@
 #
 layout: frontpage
 header:
-  image_fullwidth: yifei-chen-575975-unsplash.jpg
-  #  caption: 'Foto door YIFEI CHEN op Unsplash'
-
-widget1:
-  title: "Activiteiten"
-  url: '/activiteiten'
-  image: activiteiten-curtis-macnewton-317636-unsplash.jpg
-  text: 'Lezingen zijn een van de kernactiviteiten van Het Beleefde Genot. Lees meer over onze uitgangspunten op onze Info pagina.'
-widget2:
-  title: "Eerstkomend: over Orhan Pamuk"
-  image: onderwerp/orhan-pamuk.jpg
-  url: '/activiteit/eenzaamheid-is-bedreigend'
-  text: '<em>Eenzaamheid is bedreigend.</em> In zijn romans behandelt hij vooral de tegenstellingen Oost-West, Islam-Christendom en zeker traditie-moderniteit. - ‘Wij zijn onszelf, en dat is al complex genoeg...'
+  image_fullwidth: yoosun-won-6Lm3EcOXYGY-unsplash.jpg
+  unsplash:
+    name: Yoosun Won
+    username: showkin9
 widget3:
-  title: "Een nieuw jaar"
-  url: '/aankondiging/licht-en-ideeen-in-2019/'
-  image: sharon-mccutcheon-576867-unsplash.jpg
-  text: '<em>Licht & ideeën in 2019!</em><br/>
-Allereerst onze beste wensen voor het nieuwe jaar! Zoals u intussen al gemerkt hebt is 2019 een goed gestoffeerd jaar. Lees verder'
+  include: "_widget_fav_boek.html"
+widget2:
+  include: "_widget_activiteit.html"
+widget1:
+  include: "_widget_uitstap.html"
 #
 # Use the call for action to show a button on the frontpage
 #

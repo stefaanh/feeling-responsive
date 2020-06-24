@@ -8,16 +8,22 @@
 #                                                 /____/
 #
 # Title of your website
-title: "Het Beleefde Genot vzw"
+title: "Het Beleefde Genot"
 
 
 # The slogan describes your website and is used on homepage in <title> and other important places
 slogan: '"Ieder mens die genoegen schept in het voltooien van zijn taak is een kunstenaar; welke ook die taak is en hoe nederig ze ook is, hij brengt een kunstwerk tot stand. De toetssteen is het beleefde genot, het plezier, de perfectie: het overtuigend resultaat!"   (Henry Van De Velde)'
 
-
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
 description: "Het Beleefde Genot is een vereniging dat het culturele en literaire leven wil stimuleren door het organiseren van
- lezingen, uitstappen, literaire salons, filmvertoningen, tentoonstellingen, ..."
+ activiteiten, uitstappen, literaire salons, filmvertoningen, tentoonstellingen, ..."
+
+# The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :)
+credits: |
+  <p>Website gemaakt met &hearts; door <script src="/assets/js/webmastermail.js"></script>
+  met <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> 
+  gebaseerd op <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a>.
+  </p>
 
 # Main author of the website
 # See > authors.yml
@@ -35,14 +41,14 @@ improve_content:
 # This URL points directly to the images directory making
 # things easier to link to images in posts and templates. It needs a slash at the end.
 #
-# Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
+# Example: <img src="{{ site.urlimg }}{{ post.image.path }}" />
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
 #
 urlimg: 'https://www.hetbeleefdegenot.be/images/'
 
 
 # Logo size is 600x80 pixels
-logo: "logo.png"
+logo: "hbg-title.png"
 
 # Gems
 # Renamed
@@ -50,9 +56,15 @@ logo: "logo.png"
 #   The 'gems' configuration option has been renamed to 'plugins'. Please update your config file accordingly.
 plugins:
     - jekyll-asciidoc
+    - jekyll-toc
     - jekyll-gist
     - jekyll-paginate-v2
-
+    - jekyll-email-protect
+date_shortnames: "%a %e %b %Y"
+date_longnames: "%A %e %B %Y"
+# date_short: "%e/%-m/%Y"
+date_short: "%-d-%-m-%Y"
+time_short: "%H:%M"
 
 #       ____              _             __  _
 #      / __ \____ _____ _(_)___  ____ _/ /_(_)___  ____
@@ -67,7 +79,7 @@ plugins:
 pagination:
 
   # Site-wide kill switch, disabled here it doesn't run at all
-  enabled: true
+  enabled: false
 
   # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
   debug: false
@@ -121,13 +133,21 @@ pagination:
 
 ############################################################
 
+collections_dir: inhoud
+
 collections:
   activiteiten:
     output: true
-    permalink: /activiteit/:title
-  sprekers:
+    permalink: /:collection/:title
+  favoriete_boek:
     output: true
-    permalink: /spreker/:name
+    permalink: /:collection/:title
+  uitstappen:
+    output: true
+    permalink: /:collection/:title
+  mensen:
+    output: true
+    permalink: /:collection/:name
 
 # Theme works best with Kramdown (using the table of contents function)
 markdown: kramdown
@@ -179,6 +199,8 @@ defaults:
       # sidebar:    		# Possible values › left, right › by default there will be no sidebar
       comments: false
       author: bmadou     # Default author for pages
+      sidebar: right
+      sidebar_include: _sidebar.html
   -
     scope:
       path: ''
@@ -193,10 +215,10 @@ defaults:
       path: ''
       type: 'activiteiten'
     values:
-      show_meta: true   # Show metadata for all posts
+      show_meta: true   # Show metadata for all activiteiten
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: bmadou     # Default author for posts
+      author: bmadou     # Default author for activiteiten
 
 
 

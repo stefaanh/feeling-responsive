@@ -1,0 +1,19 @@
+<aside>
+  {%- if page.gast.persoon -%}
+    {% include wie.html rol=page.gast.rol wie=page.gast.persoon %}
+  {% elsif page.gast.size > 1 %}
+    {% for gast in page.gast %}
+      {% include wie.html rol=gast.rol wie=gast.persoon %}
+    {% endfor %}
+  {%- endif -%}
+  {%- if page.location -%}
+    {% include waar.html location=page.location%}
+  {%- endif -%}
+  {% include wanneer.html timestamp=page.timestamp %}
+	{% if page.timestamp %}
+	{% endif %}
+	{% if include.fee %}
+  <p>Include Fee</p>
+	{% endif %}
+
+</aside>

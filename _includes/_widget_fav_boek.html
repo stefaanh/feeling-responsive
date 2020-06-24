@@ -1,0 +1,33 @@
+{% comment %}
+*
+*   First the include captures the url and image in a
+*   separate variable to make the code better readable.
+*
+*   These variables are widget_url and widget_image
+*
+{% endcomment %}
+{% assign url = site.baseurl %}
+{% assign middernacht="now" | date: "%F" %}
+{% assign favboek = site.favoriete_boek 
+  | where_exp: "item", "item.timestamp < middernacht" 
+  | sort: "timestamp" | reverse| first
+  %}
+  <div class="medium-4 columns frontpage-widget">
+    <h2 class="font-size-h3 t10">Recente Favoriete Boek</h2>
+    <p> {% if favboek.image %}<a href="{{ url }}{{ favboek.url }}" title="{{ favboek.title | escape_once }}"><img src="{{ site.urlimg }}{{ favboek.image.src }}"  alt="{{ activiteit.image.caption | escape_once }}"></a>{% endif %}
+    </p>
+    {% if favboek.subheadline%}<p class="subheadline">{{ favboek.subheadline }} {% endif %}</p>
+    <h3><a href="{{ url }}{{ favboek.url }}">{{ favboek.title }}</a></h3>
+    <p>
+      {%- if favboek.meta_description -%}
+        {{ favboek.meta_description | strip_html | escape }}
+      {%- elsif favboek.teaser -%}
+        {{ favboek.teaser | markdownify }}
+      {%- endif -%}
+    </p>
+    <p><a class="button tiny radius" href="{{ url }}{{ favboek.url }}">
+        {{ site.data.language.more }}
+      </a>
+    </p>
+    <hr>
+  </div>

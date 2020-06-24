@@ -21,7 +21,7 @@ improve_content:
 # This URL points directly to the images directory making
 # things easier to link to images in posts and templates. It needs a slash at the end.
 #
-# Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
+# Example: <img src="{{ site.urlimg }}{{ post.image.path }}" />
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
 #
 urlimg: 'https://hetbeleefdegenot.minimoa.net/hbg/images'

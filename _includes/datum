@@ -1,0 +1,46 @@
+{% comment %}
+
+/**
+ * datum
+ */
+Vervangt dag en maand parameters in de format string door
+hun nederlandstalige tekst (en houdt rekening met dubbele %-tekens).
+
+* parameters:
+  - timestamp: date serial
+  - format: Ruby Time.parse string.
+              Falls back to site.date_short 
+              or default "%e/%-m/%Y"
+
+gegeven: event.timestamp = "2019-03-03 10:30"
+* voorbeeld 1
+		tag: {% include format/date timestamp=event.timestamp format="%A %e %B %Y" %}
+		rendering: "zondag 3 maart 2019"
+
+* voorbeeld 2
+	tag: {% include format/date timestamp=event.timestamp format="%a %e %b %Y" %}
+	rendering: "zo 3 mrt 2019"
+
+* voorbeeld 3
+	{% include format/date timestamp=event.timestamp format='%%%y' %}
+	rendering: "%19"
+
+* voorbeeld 4
+	tag: {% include format/date timestamp=event.timestamp %}
+	rendering: "2019-03-03 10:30"
+
+{% endcomment %}
+{%- if include.format %}
+  {% assign mx = include.timestamp | date: "%m" | minus: 1 %}
+  {% assign wx = include.timestamp | date: "%w" | plus: 0 %}
+	{% assign translated_format = format/date
+		| replace: "%%", "§§§§"
+		| replace: "%a", site.data.language.weekdag_kort[wx]
+		| replace: "%A", site.data.language.weekdag_lang[wx]
+		| replace: "%b", site.data.language.maand_kort[mx]
+		| replace: "%B", site.data.language.maand_lang[mx]
+		| replace: "§§§§", "%%" -%}
+	{{ include.timestamp | date: translated_format }}
+{% else %}
+	{{ include.timestamp | date: site.date_short | default: "%e/%-m/%Y"}}
+{% endif -%}

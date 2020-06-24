@@ -6,8 +6,9 @@ subheadline: "Contacteer ons via e-mail"
 teaser: ""
 header:
     image_fullwidth: contact-joanna-kosinska-669797-unsplash.jpg
-    caption: Photo by Joanna Kosinska on Unsplash
-    caption_url: https://unsplash.com/photos/uGcDWKN91Fs
+    unsplash:
+      name: Joanna Kosinska
+      username: joannakosinska
 permalink: "/contact/"
 # If you need a fabulous contact form for your website, I suggest you use [Wufoo][1].
 # You can use three forms for free, you get no spam and if you get more than 100 entries you have to pay.

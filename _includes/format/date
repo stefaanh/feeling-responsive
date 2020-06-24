@@ -1,0 +1,65 @@
+{% comment %}
+Rendert datum tekst in een lang, kort en standaard formaat
+
+* parameters:
+  - timestamp: date serial
+  - format: one of
+        - "lang"
+        - "kort"
+        - Ruby Time.parse string.
+        - bij verstek wordt het formaat de site.date_short configuratie of "%e/%-m/%Y"
+  - weekdag: 
+        - true 
+        - false (default)
+
+  Voorbeeld:
+  Stel nu = 2020-02-26T21:57:04+01:00
+  
+  {% include format/date timestamp=nu format="lang" weekdag=true %}
+  “woensdag 26 februari 2020 “
+
+  {% include format/date timestamp=nu format="kort" weekdag=true %}
+  “wo 26 feb 2020 “
+
+  {% include format/date timestamp=nu format="lang" %}
+  “26 februari 2020“
+
+  {% include format/date timestamp=nu format="kort" weekdag=false %}
+  “26 feb 2020“
+
+  {% include format/date timestamp=nu format="(%H:%M)" %}
+  “(21:57)“
+
+  {% include format/date timestamp=nu %}
+  “26/2/2020"
+
+{% endcomment %}
+
+{%- case include.format %}
+    {% when "lang" %}
+        {% assign formaat = site.date_longnames %}
+    {% when "kort" %}
+        {% assign formaat = site.date_shortnames %}
+    {% else %}
+        {% assign formaat = include.format | default: site.date_short  | default: "%e/%-m/%Y" %}
+{% endcase -%}
+{%- assign mx = include.timestamp | date: "%m" | minus: 1 -%}
+{%- assign wx = include.timestamp | date: "%w" | plus: 0 -%}
+{%- if include.weekdag %}
+  {% assign translated_format = formaat	| 
+  replace: "%%", "§§§§"
+    | replace: "%a", site.data.language.weekdag_kort[wx]  
+   	| replace: "%A", site.data.language.weekdag_lang[wx]
+  	| replace: "%b", site.data.language.maand_kort[mx]
+  	| replace: "%B", site.data.language.maand_lang[mx]
+  	| replace: "§§§§", "%%" %}
+{% else %}  
+  {% assign translated_format = formaat
+    | replace: "%%", "§§§§"
+    | replace: "%a", ""
+    | replace: "%A", ""
+    | replace: "%b", site.data.language.maand_kort[mx]
+    | replace: "%B", site.data.language.maand_lang[mx]
+    | replace: "§§§§", "%%"  | strip %}
+{% endif -%}
+{{ include.timestamp | date: translated_format | strip }}

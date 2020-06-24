@@ -1,0 +1,22 @@
+# symbolen voor de types activiteiten, 
+# gevolgd door
+#   de term van het type
+#   of een koppel van term en omschrijving
+# Voorbeeld ----------------------
+# symbool : "term"
+# symbool : ["Term voluit", "Duidelijke ondubbelzinnige omschrijving"]
+# --------------------------------
+literair        : "Literair salon"
+maatschappelijk : "Maatschappij"
+psychologie     : "Op de sofa met..."
+cultuur         : "Cultuursalon"
+intiem          : ["Intiem salon", "Een lezing met ontbijt, met een beperkt aantal inschrijvingen"]
+wandeling       : "Uitstap"
+minitrip        : "Minitrip"
+daguitstap      : "Daguitstap"
+bezoek          : "Bezoek" 
+lezing          : "Lezing"
+theater         : "Theater"
+concert         : "Concert"
+expositie       : "Tentoonstelling"
+film            : "Filmvoorstelling"

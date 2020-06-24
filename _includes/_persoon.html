@@ -1,0 +1,19 @@
+<aside>
+	{% for persoon in page.gast %}
+		{% include persoon persoon={{site.data.mensen[persoon]}} %}
+	{% endif %}
+	{% if page.location %}
+		{% include location location={{site.data.locations[location]}} %}
+	{% endif %}
+	{% if page.timestamp %}
+	<div class="panel radius">
+		<h3>{{site.data.language.when}}</h3>
+		<p>{%- include format/date timestamp=page.timestamp format=site.date_longnames -%}<br>
+		{%- include format/time timestamp=page.timestamp format="long"-%} </p>
+	</div>
+		{% include location {{site.data.locations[location]}} %}
+	{% endif %}
+	{% if include.fee %}
+		{% include fee {{site.data.locations[include.fee]}} %}
+	{% endif %}
+</aside>

@@ -4,14 +4,17 @@
 *  edit `_data/navigation.yml`.
 *
 {% endcomment %}
+{% assign url = site.baseurl %}
 <div id="navigation" class="sticky">
   <nav class="top-bar" role="navigation" data-topbar>
     <ul class="title-area">
       <li class="name">
-      <h1 class="show-for-small-only"><a href="{{ site.url }}{{ site.baseurl }}" class="icon-home"> {{ site.title }}</a></h1>
+        <a href="{{ url }}/"><img class="show-for-small-only" src="{{ url }}/assets/img/hbg-icon.png" alt="{{ site.title }}" style="height:100%"></a>
+        <!--h1 class="show-for-tiny-only"><a href="{{ url }}" class="icon-home">{{ site.title }}</a></h1-->
+        <h1 class="show-for-medium-only"><a href="{{ url }}/" class="icon-home">{{ site.title }}</a></h1>
     </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Nav</span></a></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
     </ul>
     <section class="top-bar-section">
 {% comment %}
@@ -29,10 +32,13 @@
 
               {% if link.url contains 'http' %}
                 {% assign domain = '' %}
+                {% assign _baseurl = '' %}
               {% elsif link.url == '#' %}
                 {% assign domain = '' %}
+                {% assign _baseurl = site.baseurl %}
               {% else %}
                 {% assign domain = site.url %}
+                {% assign _baseurl = site.baseurl %}
               {% endif %}
 
           {% comment %}   If there are links for left side begin   {% endcomment %}
@@ -84,11 +90,16 @@
 
               {% if link.url contains 'http' %}
                 {% assign domain = '' %}
+                {% assign _baseurl = '' %}
               {% elsif link.url == '#' %}
                 {% assign domain = '' %}
+                {% assign _baseurl = site.baseurl %}
               {% else %}
                 {% assign domain = site.url %}
+                {% assign _baseurl = site.baseurl %}
               {% endif %}
+
+
 
           {% comment %}   If there are links for right side begin   {% endcomment %}
           {% if link.side == 'right' %}
@@ -116,6 +127,7 @@
                       <li><a {% if dropdown_link.class %}class="{{dropdown_link.class}}"{% endif %} href="{{ domain }}{{ site.baseurl }}{{ dropdown_link.url }}"{% if dropdown_link.url contains 'http' %} target="_blank"{% endif %}>{{ dropdown_link.title | escape }}</a></li>
                     {% endfor %}
                   </ul>
+
               </li>
             {% endif %}
           {% endif %}

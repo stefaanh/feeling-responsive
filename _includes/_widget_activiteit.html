@@ -1,0 +1,37 @@
+{% comment %}
+*
+*   First the include captures the url and image in a
+*   separate variable to make the code better readable.
+*
+*   These variables are widget_url and widget_image
+*
+{% endcomment %}
+{% assign url = site.baseurl %}
+{% assign middernacht="now" | date: "%F" %}
+{% assign activiteit = site.activiteiten 
+  | where_exp: "item", "item.timestamp > middernacht" 
+  | sort: "timestamp" | first
+  %}
+  <div class="medium-4 columns frontpage-widget">
+    <h2 class="font-size-h3 t10">Volgende activiteit</h2>
+    {%- capture tijdstip %}{% include tijdstip timestamp=activiteit.timestamp format = 'lang' %}{% endcapture -%}
+    <p class="b20">{{ tijdstip  | capitalize }}<br/>
+    {{ site.data.locations[activiteit.locatie].naam | capitalize }}</p>
+    <p>
+      {% if activiteit.image %}<a href="{{ url }}{{ activiteit.url }}" title="{{ activiteit.title | escape_once }}"><img src="{{ site.urlimg }}{{ activiteit.image.src }}"  alt="{{ activiteit.image.caption | escape_once }}"></a>{% endif %}
+    </p>
+    <p class="subheadline">{{ activiteit.categories | join: ' &middot; ' | prepend: '<span class="subheader">' | append: '</span>' }}{% if activiteit.categories != empty and activiteit.subheadline != NULL %} – {% endif %}{{ activiteit.subheadline }}</p>
+    <h3><a href="{{ url }}{{ activiteit.url }}">{{ activiteit.title }}</a></h3>
+    <p>
+      {%- if activiteit.meta_description -%}
+        {{ activiteit.meta_description | strip_html | escape }}
+      {%- elsif activiteit.teaser -%}
+        {{ activiteit.teaser }}
+      {%- endif -%}
+    </p>
+    <p><a class="button tiny radius" href="{{ url }}{{ activiteit.url }}">
+        {{ site.data.language.more }}
+      </a>
+    </p>
+    <hr>
+  </div>

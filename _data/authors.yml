@@ -1,0 +1,45 @@
+# People Details
+#   used to be authors.yaml, changed to contain speakers, performers, etc...
+#
+# 1. Edit information below
+# 2. Change site author in config.yml
+# 3. Change default post/page authors in config.yml
+
+# shuysent: # uniek label (sleutel)
+#    naam:    Stefaan Huysentruyt
+              # de volledige naam zoals die op een publicatie, site of affiche staat
+#    siterole:  redactie, revisor, webmaster, design
+              # komma gescheiden termen
+#    roles:  redactie, spreker, dichter, schrijver, kunstenaar, voorzitter, bestuurslid, webmaster
+              # komma gescheiden termen
+#    uri:     https://www.minimoa.net/
+              # persoonlijke website of websitepagina
+#    email:   stefaan [punt] huysentruyt [apestaart] minimoa [punt] net
+              # email adres
+#    twitter: @stefaan.huysentruyt
+              # twitter account naam
+#    image_url:
+#    image_caption:
+#    bio_kort: markdown tekst
+#
+# Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
+bmadou: 
+  naam:       Bart Madou
+  siteroles:  redactie
+  uri:        https://www.hetbeleefdegenot.be
+  email:      bart@hetbeleefdegenot.be
+  bio_kort:   was tot voor kort de voorzitter van Het Beleefde Genot, en blijft actief met de programmatie bezig.
+
+shuysent:
+  naam:       Stefaan Huysentruyt
+  siteroles:   webmaster
+  uri:        https://www.minimoa.net/
+  email:      stefaan@hetbeleefdegenot.be
+  twitter:    "@stefaan.huysentruyt"
+  bio_kort:   is lid van de raad van bestuur, software ontwikkelaar, heeft interesse voor online privacy en de impact van technologie op mens en maatschappij
+
+rcrombez:
+  naam:     Robert Crombez
+  siteroles: revisie, proeflezer
+  email:    robert.crombez [apestaart] telenet [punt] be
+  bio_kort: is penningmeester van Het Beleefde Genot
